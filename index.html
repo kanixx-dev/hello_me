@@ -1,40 +1,486 @@
-<html>
-    <head>
-        <title>Hello Me</title>
-    </head>
-    <body>
-        <h1 style="color:red;">Hello Me</h1>
-        <h2>
-  This is Me,
-  <span style="
-    color:#fabb04;
-    font-style:italic;
-    position: relative;
-    display: inline-block;
-  ">
-    Kanishka
-    <span style="
-      position: absolute;
-      top: 50%; left: 50%;
-      width: 100%; height: 100%;
-      background: rgba(250,187,4,0.4);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      animation: ping 1s ease-out infinite;
-      pointer-events: none;
-      z-index: -1;
-    "></span>
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- Inline keyframes -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanishka - Full Stack Engineer & Freelancer</title>
+</head>
+
+<body id="body"
+    style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0a0a0a; min-height: 100vh; overflow-x: hidden; transition: background 0.3s ease, color 0.3s ease; color: #e0e0e0;">
+
+    <!-- Navigation -->
+    <nav id="nav"
+        style="position: fixed; top: 0; width: 100%; padding: 20px 0; background: rgba(20, 20, 20, 0.8); backdrop-filter: blur(10px); z-index: 1000; transition: all 0.3s ease; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+        <div
+            style="max-width: 1200px; margin: 0 auto; padding: 0 30px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-size: 24px; font-weight: bold; color: #ffffff; letter-spacing: 2px;">KANISHKA</div>
+            <div style="display: flex; gap: 30px; align-items: center;">
+                <a href="#home"
+                    style="color: #e0e0e0; text-decoration: none; font-weight: 500; transition: all 0.3s ease; position: relative;">
+                    <span style="position: relative; z-index: 1;">Home</span>
+                </a>
+                <a href="#about"
+                    style="color: #e0e0e0; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">About</a>
+                <a href="#skills"
+                    style="color: #e0e0e0; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">Skills</a>
+                <a href="#services"
+                    style="color: #e0e0e0; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">Services</a>
+                <a href="#contact"
+                    style="color: #e0e0e0; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">Contact</a>
+                <button id="themeToggle" onclick="toggleTheme()"
+                    style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #e0e0e0; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 18px; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                    <span id="themeIcon">🌙</span>
+                    <span id="themeText">Dark</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #ffffff; padding: 100px 20px 50px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);">
+        <div style="max-width: 800px; animation: fadeInUp 1s ease-out;">
+            <h1
+                style="font-size: 72px; margin: 0 0 20px; font-weight: 700; text-shadow: 2px 2px 20px rgba(0,0,0,0.5); letter-spacing: 3px; color: #ffffff;">
+                Hi, I'm Kanishka</h1>
+            <div style="font-size: 32px; margin: 20px 0; font-weight: 300; opacity: 0.9; color: #b0b0b0;">Full Stack
+                Engineer & Freelancer</div>
+            <p style="font-size: 20px; margin: 30px 0; line-height: 1.6; opacity: 0.85; color: #c0c0c0;">Building
+                digital experiences that matter. Transforming ideas into reality through code.</p>
+            <div style="margin-top: 40px;">
+                <a href="#contact"
+                    style="display: inline-block; padding: 15px 40px; background: #ffffff; color: #0a0a0a; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.3); margin: 0 10px;">Get
+                    In Touch</a>
+                <a href="#about"
+                    style="display: inline-block; padding: 15px 40px; background: transparent; color: #ffffff; text-decoration: none; border: 2px solid #ffffff; border-radius: 50px; font-weight: 600; font-size: 18px; transition: all 0.3s ease; margin: 0 10px;">Learn
+                    More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about"
+        style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 20px; background: #111111; transition: background 0.3s ease;">
+        <div style="max-width: 1000px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+            <div>
+                <h2
+                    style="font-size: 48px; margin: 0 0 30px; color: #ffffff; font-weight: 700; transition: color 0.3s ease;">
+                    About Me</h2>
+                <p
+                    style="font-size: 18px; line-height: 1.8; color: #c0c0c0; margin-bottom: 20px; transition: color 0.3s ease;">
+                    I'm a passionate full-stack engineer with a love for creating innovative solutions. With expertise
+                    spanning both frontend and backend technologies, I bring ideas to life through clean, efficient
+                    code.
+                </p>
+                <p
+                    style="font-size: 18px; line-height: 1.8; color: #c0c0c0; margin-bottom: 20px; transition: color 0.3s ease;">
+                    As a freelancer, I've had the privilege of working with diverse clients, helping them build scalable
+                    applications, modern web experiences, and robust systems that drive their business forward.
+                </p>
+                <p style="font-size: 18px; line-height: 1.8; color: #c0c0c0; transition: color 0.3s ease;">
+                    When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+                    projects, or sharing knowledge with the developer community.
+                </p>
+            </div>
+            <div
+                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
+                <div style="color: #ffffff;">
+                    <div style="margin-bottom: 30px;">
+                        <div style="font-size: 36px; font-weight: bold; margin-bottom: 10px; color: #ffffff;">100+</div>
+                        <div style="font-size: 18px; opacity: 0.9; color: #b0b0b0;">Projects Completed</div>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <div style="font-size: 36px; font-weight: bold; margin-bottom: 10px; color: #ffffff;">50+</div>
+                        <div style="font-size: 18px; opacity: 0.9; color: #b0b0b0;">Happy Clients</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 36px; font-weight: bold; margin-bottom: 10px; color: #ffffff;">5+</div>
+                        <div style="font-size: 18px; opacity: 0.9; color: #b0b0b0;">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills"
+        style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 20px; background: #0a0a0a; transition: background 0.3s ease;">
+        <div style="max-width: 1200px; width: 100%;">
+            <h2
+                style="font-size: 48px; text-align: center; margin: 0 0 60px; color: #ffffff; font-weight: 700; transition: color 0.3s ease;">
+                Skills & Technologies</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div
+                    style="background: #1a1a1a; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div style="font-size: 40px; margin-bottom: 15px;">💻</div>
+                    <h3 style="font-size: 24px; margin: 0 0 15px; color: #ffffff; transition: color 0.3s ease;">Frontend
+                    </h3>
+                    <p style="color: #b0b0b0; line-height: 1.6; margin: 0; transition: color 0.3s ease;">React, Vue.js,
+                        Angular, HTML5, CSS3, JavaScript, TypeScript, Tailwind CSS</p>
+                </div>
+                <div
+                    style="background: #1a1a1a; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div style="font-size: 40px; margin-bottom: 15px;">⚙</div>
+                    <h3 style="font-size: 24px; margin: 0 0 15px; color: #ffffff; transition: color 0.3s ease;">Backend
+                    </h3>
+                    <p style="color: #b0b0b0; line-height: 1.6; margin: 0; transition: color 0.3s ease;">Node.js,
+                        Python, Django, Express, REST APIs, GraphQL, Microservices</p>
+                </div>
+                <div
+                    style="background: #1a1a1a; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div style="font-size: 40px; margin-bottom: 15px;">🗄</div>
+                    <h3 style="font-size: 24px; margin: 0 0 15px; color: #ffffff; transition: color 0.3s ease;">Database
+                    </h3>
+                    <p style="color: #b0b0b0; line-height: 1.6; margin: 0; transition: color 0.3s ease;">PostgreSQL,
+                        MongoDB, MySQL, Redis, Firebase, Prisma, ORM</p>
+                </div>
+                <div
+                    style="background: #1a1a1a; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div style="font-size: 40px; margin-bottom: 15px;">☁</div>
+                    <h3 style="font-size: 24px; margin: 0 0 15px; color: #ffffff; transition: color 0.3s ease;">DevOps &
+                        Cloud</h3>
+                    <p style="color: #b0b0b0; line-height: 1.6; margin: 0; transition: color 0.3s ease;">AWS, Docker,
+                        Kubernetes, CI/CD, Git, GitHub Actions, Linux</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services"
+        style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 20px; background: #111111; transition: background 0.3s ease;">
+        <div style="max-width: 1200px; width: 100%;">
+            <h2
+                style="font-size: 48px; text-align: center; margin: 0 0 60px; color: #ffffff; font-weight: 700; transition: color 0.3s ease;">
+                Services I Offer</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                <div
+                    style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 40px; border-radius: 20px; color: #ffffff; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
+                    <div style="font-size: 50px; margin-bottom: 20px;">🚀</div>
+                    <h3 style="font-size: 28px; margin: 0 0 20px; color: #ffffff;">Web Development</h3>
+                    <p style="line-height: 1.8; opacity: 0.9; margin: 0; color: #c0c0c0;">Custom web applications built
+                        with modern frameworks. Responsive, fast, and user-friendly interfaces that deliver exceptional
+                        experiences.</p>
+                </div>
+                <div
+                    style="background: linear-gradient(135deg, #2d1b3d 0%, #1a1a2e 100%); padding: 40px; border-radius: 20px; color: #ffffff; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
+                    <div style="font-size: 50px; margin-bottom: 20px;">📱</div>
+                    <h3 style="font-size: 28px; margin: 0 0 20px; color: #ffffff;">API Development</h3>
+                    <p style="line-height: 1.8; opacity: 0.9; margin: 0; color: #c0c0c0;">RESTful and GraphQL APIs
+                        designed for scalability and performance. Secure, well-documented, and ready for production use.
+                    </p>
+                </div>
+                <div
+                    style="background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%); padding: 40px; border-radius: 20px; color: #ffffff; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
+                    <div style="font-size: 50px; margin-bottom: 20px;">🔧</div>
+                    <h3 style="font-size: 28px; margin: 0 0 20px; color: #ffffff;">Consulting</h3>
+                    <p style="line-height: 1.8; opacity: 0.9; margin: 0; color: #c0c0c0;">Technical consulting to help
+                        you make the right architectural decisions, optimize performance, and scale your applications
+                        effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact"
+        style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 20px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #ffffff; transition: background 0.3s ease;">
+        <div style="max-width: 800px; width: 100%; text-align: center;">
+            <h2
+                style="font-size: 48px; margin: 0 0 30px; font-weight: 700; color: #ffffff; transition: color 0.3s ease;">
+                Let's Work Together</h2>
+            <p
+                style="font-size: 20px; margin: 0 0 50px; opacity: 0.9; line-height: 1.6; color: #c0c0c0; transition: color 0.3s ease;">
+                Have a project in mind? I'm always open to discussing new opportunities and interesting projects. Let's
+                bring your ideas to life!
+            </p>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 50px;">
+                <a href="mailto:kanishka@example.com"
+                    style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; background: #ffffff; color: #0a0a0a; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <span>📧</span> Email Me
+                </a>
+                <a href="https://linkedin.com" target="_blank"
+                    style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; background: rgba(255, 255, 255, 0.1); color: #ffffff; text-decoration: none; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 50px; font-weight: 600; font-size: 18px; transition: all 0.3s ease;">
+                    <span>💼</span> LinkedIn
+                </a>
+                <a href="https://github.com" target="_blank"
+                    style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; background: rgba(255, 255, 255, 0.1); color: #ffffff; text-decoration: none; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 50px; font-weight: 600; font-size: 18px; transition: all 0.3s ease;">
+                    <span>💻</span> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"
+        style="background: rgba(10, 10, 10, 0.8); color: #b0b0b0; text-align: center; padding: 30px 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
+        <p style="margin: 0; opacity: 0.8;">© 2024 Kanishka. Full Stack Engineer & Freelancer. All rights reserved.</p>
+    </footer>
+
     <style>
-      @keyframes ping {
-        0%   { transform: translate(-50%, -50%) scale(0.6); opacity: 1; }
-        75%  { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
-        100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
-      }
-    </style>
-  </span>
-</h2>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
 
-    </body>
-</html> 
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        a:hover {
+            transform: translateY(-2px);
+            opacity: 0.8;
+        }
+
+        nav a:hover {
+            color: #ffffff !important;
+        }
+
+        section>div>div>div:hover {
+            transform: translateY(-10px);
+        }
+
+        #themeToggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+    </style>
+
+    <script>
+        let isLightTheme = false;
+
+        function applyDarkTheme() {
+            const body = document.getElementById('body');
+            const nav = document.getElementById('nav');
+            const home = document.getElementById('home');
+            const about = document.getElementById('about');
+            const skills = document.getElementById('skills');
+            const services = document.getElementById('services');
+            const contact = document.getElementById('contact');
+            const footer = document.getElementById('footer');
+            const themeIcon = document.getElementById('themeIcon');
+            const themeText = document.getElementById('themeText');
+            const themeToggle = document.getElementById('themeToggle');
+
+            // Body
+            body.style.background = '#0a0a0a';
+            body.style.color = '#e0e0e0';
+
+            // Nav
+            nav.style.background = 'rgba(20, 20, 20, 0.8)';
+            nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => link.style.color = '#e0e0e0');
+            nav.querySelector('div:first-child').style.color = '#ffffff';
+            themeToggle.style.background = 'rgba(255, 255, 255, 0.1)';
+            themeToggle.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+            themeToggle.style.color = '#e0e0e0';
+
+            // Home
+            home.style.background = 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%)';
+            home.style.color = '#ffffff';
+            home.querySelector('h1').style.color = '#ffffff';
+            home.querySelector('div:nth-child(2)').style.color = '#b0b0b0';
+            home.querySelector('p').style.color = '#c0c0c0';
+            const homeLinks = home.querySelectorAll('a');
+            homeLinks[0].style.background = '#ffffff';
+            homeLinks[0].style.color = '#0a0a0a';
+            homeLinks[1].style.background = 'transparent';
+            homeLinks[1].style.color = '#ffffff';
+            homeLinks[1].style.border = '2px solid #ffffff';
+
+            // About
+            about.style.background = '#111111';
+            about.querySelector('h2').style.color = '#ffffff';
+            const aboutPs = about.querySelectorAll('p');
+            aboutPs.forEach(p => p.style.color = '#c0c0c0');
+            const aboutCard = about.querySelector('div > div:last-child');
+            aboutCard.style.background = 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)';
+            aboutCard.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+            const aboutCardTexts = aboutCard.querySelectorAll('div');
+            aboutCardTexts[0].querySelector('div:first-child').style.color = '#ffffff';
+            aboutCardTexts[1].querySelector('div:first-child').style.color = '#ffffff';
+            aboutCardTexts[2].querySelector('div:first-child').style.color = '#ffffff';
+            aboutCard.querySelectorAll('div > div:last-child').forEach(div => div.style.color = '#b0b0b0');
+
+            // Skills
+            skills.style.background = '#0a0a0a';
+            skills.querySelector('h2').style.color = '#ffffff';
+            const skillCards = skills.querySelectorAll('div > div > div');
+            skillCards.forEach(card => {
+                card.style.background = '#1a1a1a';
+                card.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+                card.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
+                card.querySelector('h3').style.color = '#ffffff';
+                card.querySelector('p').style.color = '#b0b0b0';
+            });
+
+            // Services
+            services.style.background = '#111111';
+            services.querySelector('h2').style.color = '#ffffff';
+            const serviceCards = services.querySelectorAll('div > div > div');
+            serviceCards[0].style.background = 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)';
+            serviceCards[1].style.background = 'linear-gradient(135deg, #2d1b3d 0%, #1a1a2e 100%)';
+            serviceCards[2].style.background = 'linear-gradient(135deg, #16213e 0%, #1a1a2e 100%)';
+            serviceCards.forEach(card => {
+                card.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+                card.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.5)';
+                card.querySelector('h3').style.color = '#ffffff';
+                card.querySelector('p').style.color = '#c0c0c0';
+            });
+
+            // Contact
+            contact.style.background = 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%)';
+            contact.style.color = '#ffffff';
+            contact.querySelector('h2').style.color = '#ffffff';
+            contact.querySelector('p').style.color = '#c0c0c0';
+            const contactLinks = contact.querySelectorAll('a');
+            contactLinks[0].style.background = '#ffffff';
+            contactLinks[0].style.color = '#0a0a0a';
+            contactLinks[1].style.background = 'rgba(255, 255, 255, 0.1)';
+            contactLinks[1].style.color = '#ffffff';
+            contactLinks[1].style.border = '2px solid rgba(255, 255, 255, 0.3)';
+            contactLinks[2].style.background = 'rgba(255, 255, 255, 0.1)';
+            contactLinks[2].style.color = '#ffffff';
+            contactLinks[2].style.border = '2px solid rgba(255, 255, 255, 0.3)';
+
+            // Footer
+            footer.style.background = 'rgba(10, 10, 10, 0.8)';
+            footer.style.color = '#b0b0b0';
+            footer.style.borderTop = '1px solid rgba(255, 255, 255, 0.1)';
+
+            // Theme toggle
+            themeIcon.textContent = '🌙';
+            themeText.textContent = 'Dark';
+        }
+
+        function applyLightTheme() {
+            const body = document.getElementById('body');
+            const nav = document.getElementById('nav');
+            const home = document.getElementById('home');
+            const about = document.getElementById('about');
+            const skills = document.getElementById('skills');
+            const services = document.getElementById('services');
+            const contact = document.getElementById('contact');
+            const footer = document.getElementById('footer');
+            const themeIcon = document.getElementById('themeIcon');
+            const themeText = document.getElementById('themeText');
+            const themeToggle = document.getElementById('themeToggle');
+
+            // Body
+            body.style.background = '#f5f5f5';
+            body.style.color = '#333333';
+
+            // Nav
+            nav.style.background = 'rgba(255, 255, 255, 0.9)';
+            nav.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => link.style.color = '#333333');
+            nav.querySelector('div:first-child').style.color = '#000000';
+            themeToggle.style.background = 'rgba(0, 0, 0, 0.1)';
+            themeToggle.style.border = '1px solid rgba(0, 0, 0, 0.2)';
+            themeToggle.style.color = '#333333';
+
+            // Home
+            home.style.background = 'linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%)';
+            home.style.color = '#1a1a1a';
+            home.querySelector('h1').style.color = '#1a1a1a';
+            home.querySelector('div:nth-child(2)').style.color = '#555555';
+            home.querySelector('p').style.color = '#666666';
+            const homeLinks = home.querySelectorAll('a');
+            homeLinks[0].style.background = '#1a1a1a';
+            homeLinks[0].style.color = '#ffffff';
+            homeLinks[1].style.background = 'transparent';
+            homeLinks[1].style.color = '#1a1a1a';
+            homeLinks[1].style.border = '2px solid #1a1a1a';
+
+            // About
+            about.style.background = '#ffffff';
+            about.querySelector('h2').style.color = '#1a1a1a';
+            const aboutPs = about.querySelectorAll('p');
+            aboutPs.forEach(p => p.style.color = '#555555');
+            const aboutCard = about.querySelector('div > div:last-child');
+            aboutCard.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            aboutCard.style.border = '1px solid rgba(0, 0, 0, 0.1)';
+
+            // Skills
+            skills.style.background = '#f8f8f8';
+            skills.querySelector('h2').style.color = '#1a1a1a';
+            const skillCards = skills.querySelectorAll('div > div > div');
+            skillCards.forEach(card => {
+                card.style.background = '#ffffff';
+                card.style.border = '1px solid rgba(0, 0, 0, 0.1)';
+                card.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+                card.querySelector('h3').style.color = '#1a1a1a';
+                card.querySelector('p').style.color = '#666666';
+            });
+
+            // Services
+            services.style.background = '#ffffff';
+            services.querySelector('h2').style.color = '#1a1a1a';
+            const serviceCards = services.querySelectorAll('div > div > div');
+            serviceCards[0].style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            serviceCards[1].style.background = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+            serviceCards[2].style.background = 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)';
+            serviceCards.forEach(card => {
+                card.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+                card.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.1)';
+            });
+
+            // Contact
+            contact.style.background = 'linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%)';
+            contact.style.color = '#1a1a1a';
+            contact.querySelector('h2').style.color = '#1a1a1a';
+            contact.querySelector('p').style.color = '#555555';
+            const contactLinks = contact.querySelectorAll('a');
+            contactLinks[0].style.background = '#1a1a1a';
+            contactLinks[0].style.color = '#ffffff';
+            contactLinks[1].style.background = 'rgba(0, 0, 0, 0.1)';
+            contactLinks[1].style.color = '#1a1a1a';
+            contactLinks[1].style.border = '2px solid rgba(0, 0, 0, 0.3)';
+            contactLinks[2].style.background = 'rgba(0, 0, 0, 0.1)';
+            contactLinks[2].style.color = '#1a1a1a';
+            contactLinks[2].style.border = '2px solid rgba(0, 0, 0, 0.3)';
+
+            // Footer
+            footer.style.background = 'rgba(245, 245, 245, 0.9)';
+            footer.style.color = '#666666';
+            footer.style.borderTop = '1px solid rgba(0, 0, 0, 0.1)';
+
+            // Theme toggle
+            themeIcon.textContent = '☀';
+            themeText.textContent = 'Light';
+        }
+
+        function toggleTheme() {
+            isLightTheme = !isLightTheme;
+            if (isLightTheme) {
+                applyLightTheme();
+                localStorage.setItem('theme', 'light');
+            } else {
+                applyDarkTheme();
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme on page load
+        window.addEventListener('DOMContentLoaded', function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                isLightTheme = true;
+                applyLightTheme();
+            } else {
+                isLightTheme = false;
+                applyDarkTheme();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
